@@ -851,6 +851,7 @@ if [ true ]; then
             fi
             echo "[*] installing dualra1n-loader"
 <<<<<<< HEAD
+<<<<<<< HEAD
             unzip -o other/dualra1n-loader.ipa -d other/
             mkdir -p other/Payload/Applications/
             
@@ -866,6 +867,8 @@ if [ true ]; then
                     echo "error saving snapshot, SKIPPING ..."
                 fi
 =======
+=======
+>>>>>>> parent of 7c7a50a (dualra1n-loader update and odyssey fix)
             unzip other/dualra1n-loader.ipa -d other/
 
             mv -nv other/Payload/Odyssey.app/  other/Payload/dualra1n-loader.app/  other/Payload/Applications/
