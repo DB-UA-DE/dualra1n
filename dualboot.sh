@@ -850,6 +850,7 @@ if [ true ]; then
                 echo "installing odyssey"
             fi
             echo "[*] installing dualra1n-loader"
+<<<<<<< HEAD
             unzip -o other/dualra1n-loader.ipa -d other/
             mkdir -p other/Payload/Applications/
             
@@ -864,6 +865,16 @@ if [ true ]; then
                 if [ "$(remote_cmd "/usr/bin/snaputil -c orig-fs /mnt8")" ]; then
                     echo "error saving snapshot, SKIPPING ..."
                 fi
+=======
+            unzip other/dualra1n-loader.ipa -d other/
+
+            mv -nv other/Payload/Odyssey.app/  other/Payload/dualra1n-loader.app/  other/Payload/Applications/
+            remote_cp other/Payload/Applications/ root@localhost:/mnt8/
+
+            echo "[*] Saving snapshot"
+            if [ "$(remote_cmd "/usr/bin/snaputil -c orig-fs /mnt8")" ]; then
+                echo "error saving snapshot, SKIPPING ..."
+>>>>>>> parent of 7c7a50a (dualra1n-loader update and odyssey fix)
             fi
 
             if [[ ! "$version" = "13."* ]]; then
