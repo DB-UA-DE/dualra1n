@@ -835,7 +835,10 @@ if [ true ]; then
             remote_cmd "cp -a /mnt6/${active}/* /mnt8/" # copy preboot to ios 13 partition
             echo "[*] Copying needed files to boot ios 13"
             remote_cmd "mkdir -p /mnt8/private/xarts && mkdir -p /mnt8/private/preboot/"
-            remote_cmd "rm -v /mnt8/usr/standalone/firmware/FUD/AOP.img4"
+	    if [ $(remote_cmd "ls /mnt8/usr/standalone/firmware/FUD/AOP.img4") ]; then
+                remote_cmd "rm -v /mnt8/usr/standalone/firmware/FUD/AOP.img4"
+	    fi
+            
             remote_cmd "cp -a /mnt6/* /mnt8/private/preboot/"
             echo "[*] we are backuping the apfs binaries from the original and changing to ios 14 apfs.fs" # maybe must of ipad will not work becuase that apfs.fs is from my iphone ipsw ios14 so you can mount a dmg rootfs of ios 14 and extract the apfs.fs and sbin/fsck and remplace it or paste it to the second ios which is ios 13 
             remote_cmd "mv /mnt8/sbin/fsck /mnt8/sbin/fsckBackup && mv /mnt8/System/Library/Filesystems/apfs.fs /mnt8/System/Library/Filesystems/apfs.fsBackup "
