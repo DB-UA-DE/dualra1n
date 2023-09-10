@@ -22,7 +22,7 @@ Does not work on iOS 16.
    - futurerestore --exit-recovery
    - irecovery -n
 
-# Recommended Dualboot Versions
+# Information on Dualboot versions
 - For devices with A11 SoCs, versions 14.2 and earlier will not boot. Therefore, use 14.3 or later versions instead.
 - iOS 13 (only 13.6, 13.7) is supported. To dualboot iOS 13, use the ios13 branch. Switch to this branch using `git checkout ios13`. To return to the main branch, use `git checkout main`. 
 
