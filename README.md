@@ -10,6 +10,8 @@ Does not work on iOS 16.
 
 - [Video tutorial from burhanrana](https://www.youtube.com/watch?v=4iCZv7Ox5AA)
 
+- [An alternative Tutorial](https://github.com/DB-UA-DE/dualra1n/blob/main/altTutorial.md) 
+
 # Prerequisites
 - An A10-A11 device with a deactivated passcode
 - An .iPSW file for iOS 14-15
